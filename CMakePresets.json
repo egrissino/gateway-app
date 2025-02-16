@@ -1,0 +1,4 @@
+{
+    "version": 4,
+    "cmakeMinimumRequired": {"major": 3,"minor": 2,"patch": 2}
+}
