@@ -1,4 +1,4 @@
-# gateway-app
+# Mono Gateway - Linux Userspace Application
 
 This repository provides applications and utilities built using the SDK generated from the Yocto-based Mono Gateway build system. It enables the creation of deployable images for the Mono Gateway, leveraging the customized Yocto environment.
 
