@@ -15,8 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Configure CMake
+    - name: CMake Build
       run: ./configure.sh
 
-    - name: Build
-      run: ./build.sh
