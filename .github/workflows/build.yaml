@@ -24,24 +24,24 @@ jobs:
 
     steps:
     - name: Checkout code
-        uses: actions/checkout@v4
+      uses: actions/checkout@v4
 
     - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
+      id: create_release
+      uses: actions/create-release@v1
+      env:
         GITHUB_TOKEN: ${{ secrets.GHCR_PAT }}
-        with:
+      with:
         tag_name: ${{ github.sha }}
         release_name: Release ${{ github.sha }}
         draft: false
         prerelease: false
 
     - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
+      uses: actions/upload-release-asset@v1
+      env:
         GITHUB_TOKEN: ${{ secrets.GHCR_PAT }}
-        with:
+      with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ${{github.workspace}}/build/gateway-app
         asset_name: gateway-app
