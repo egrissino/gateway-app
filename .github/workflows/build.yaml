@@ -24,7 +24,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GHCR_PAT }}
       with:
-        tag_name: ${{ github.sha }}
+        tag_name: gateway-app-release
         release_name: Release ${{ github.sha }}
         draft: false
         prerelease: false
