@@ -24,21 +24,19 @@ cd gateway-app
 ### 2. Setup the SDK Environment
 Before building, source the Yocto SDK environment:
 ```bash
-source /opt/monogateway-sdk/environment-setup-aarch64-poky-linux
+./configure.sh
 ```
 
 ### 3. Build the Application
 Use CMake or Makefile-based build processes depending on the application:
 ```bash
-mkdir build && cd build
-cmake ..
-make
+./build.sh
 ```
 
 ### 4. Deploy to Mono Gateway
 Copy the built binaries to the Mono Gateway:
 ```bash
-scp my-app user@monogateway:/opt/applications/
+scp my-app user@gateway:/opt/applications/
 ```
 Or use an automated deployment script provided in this repository.
 
