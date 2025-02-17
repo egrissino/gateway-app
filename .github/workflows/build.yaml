@@ -15,6 +15,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Checkout project
+      run: git clone https://github.com/egrissino/gateway-app.git && cd gateway-app
+
     - name: Configure CMake
       run: ./configure.sh
 
